@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0px;
+  padding : 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-layout {
+  z-index: 100;
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  position: fixed;
+  top : 0px;
+  right: 0px;
+  left: 0px;
+  background-color: white;
+  padding : 1rem;
+  padding-left : 1.5rem;
+  justify-content: space-between;
+  /*border-bottom : rgba(0, 0, 0, 0.208) 1px solid;*/
+  box-shadow : 0px 0px 1px rgba(0,0,0,0.208);
+}
+
+.header-title{
+  font-size : 2rem;
+}
+
+.header-icons{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-icons div{
+  padding : 0.5rem;
+  padding-left : 2rem;
+}
+.header-icons div, .header-icons div img{
+  width : 1.5rem;
+  height : 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scroll-view{
+  margin-top : 4.25rem;
+  margin-bottom : 4.25rem;
+  overflow: hidden;
+}
+
+.post-layout{
+  margin-bottom : 0.2rem;
+  overflow: hidden;
+  border-bottom : rgba(0, 0, 0, 0.208) 1px solid;
+  border-top : rgba(0,0,0,0.202) 1px solid;
+}
+
+.post-header{
+  display: flex;
+  padding : 1rem;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-avatar{
+  display: flex;
+  align-items: center;
+}
+
+.post-avatar {
+  width : 3rem;
+  height : 30%;
+}
+.post-avatar img{
+  width : 3rem;
+  height : 3rem;
+  border-radius : 5rem;
+  object-fit : cover;
+}
+
+.account-name-info{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left : 1rem;
+}
+
+.account-name-info span{
+  color: rgba(0, 0, 0, 0.512);
+
+}
+
+.post-image {
+  display: flex;
+  flex: 1;
+  height : 60%;
+}
+.post-image img{
+  width : 100%;
+  height : 20rem;
+  object-fit: cover;
+}
+
+.post-footer{
+  display : flex;
+  flex : 1;
+  flex-direction : column;
+  padding : 0.5rem;
+}
+
+.post-footer .claim-button-layout button{
+  background-color : rgb(32, 251, 32);
+}
+
+.footer-icon-buttons{
+  display : flex;
+  flex : 1;
+  align-items: center;
+  justify-content : space-around;
+}
+
+.claim-button-layout button{
+  color : white;
+  padding : 0.5rem;
+  padding-left : 1rem;
+  padding-right : 1rem;
+  border-radius : 1rem;
+  border : none;
+}
+
+.footer-name-date{
+  display : flex;
+  flex : 1;
+  margin-top : 1rem;
+  justify-content : space-between;
+}
+
+.footer-name{
+  padding-left : 5rem;
+}
+
+.BN-bar-layout{
+  display : flex;
+  flex : 1;
+  justify-content : space-around;
+  align-items: center;
+  position : fixed;
+  bottom : 0px;
+  left : 0px;
+  right : 0px;
+  padding : 1rem;
+  padding-top : 0.5rem;
+  padding-bottom : 0.5rem;
+  background-color : white;
+  border-top: 1px solid rgba(0, 0, 0, 0.184);
+}
+
+.BN-bar-avatar{
+  display: flex;
+  border : 4px solid black;
+  border-radius : 3rem;
+}
+
+.BN-bar-layout div img{
+  width : 2.2rem;
+  height : 2.2rem;
+  object-fit: cover;
+  border-radius: 10rem;
+}
+/*
+.fire-icon{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+*/
+
+.like .comment , .like img , .comment img{
+  width : 1.5rem;
+}
+
+.shear , .shear img{ 
+  width : 1.5rem;
+}
+
+.verticaldots , .verticaldots img{
+  height: 1.5rem;
+  width: 1.5rem;
 }

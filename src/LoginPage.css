@@ -1,0 +1,84 @@
+
+.title{
+    display: flex;
+    flex : 1;
+    justify-content: center;
+    padding-top  : 15%;
+    font-size: 20px;
+}
+
+.username-field , .user-password-field , .user-email-field{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-top : 15%;
+    padding-left : 10%;
+    padding-right : 10%;
+}
+
+.input-field{
+    display: flex;
+    flex: 1;
+}
+
+.input-field input{
+    width : 100%;
+    border: none;
+}
+.eye-icon img{
+    width : 10%;
+}
+.eye-icon{
+    position: relative;
+    top : -5px;
+}
+
+.user-password-field{
+    display: flex;
+    justify-content: center;
+    padding : 0px;
+    margin-top : 15%;
+    margin-left : 10%;
+    margin-right: 10%;
+    border: 1px solid rgba(0, 0, 0, 0.563);
+}
+
+.user-password-field img{
+    position: relative;
+    top : 10px;
+    width: 2rem;
+}
+
+
+input{
+    padding : 0.7rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.563);
+}
+
+input::placeholder{
+    color: black;
+}
+
+
+
+.forgot-password-button , .create-account-button{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding-top : 10%;
+    padding-right : 10%;
+}
+
+button{
+    background-color: transparent;
+    border : none;
+    color : rgb(21, 117, 231,1);
+    font-weight: bold;
+    outline:none;
+}
+
+.create-account-button button{
+    padding : 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.318);
+}

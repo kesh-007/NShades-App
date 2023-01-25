@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import HomePage from './screens/HomePage';
 import ChatPage from './screens/ChatPage';
@@ -9,20 +9,12 @@ import Notifications from './screens/Notifications.js';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Upload from './screens/Upload';
-import LoginPage from './LoginPage';
-import user from './LoginPage'
-import {auth,db,provider} from './Firebase/firebase'
-import {useAuthState} from 'react-firebase-hooks/auth'
+export default function BottomNavigationBar() {
 
-export default function App() {
-  const [galleryphoto,setgaleryphoto] = useState()
-  const [user] = useAuthState(auth)
-
-  
   return (
-      
-<ChatPage/>
-
+    <NavigationContainer style={{backgroundcolor:'red'}}>
+   <BottomTabs/>
+    </NavigationContainer>
 
   
   );
@@ -31,8 +23,8 @@ export default function App() {
 
 const Stack=createStackNavigator();
 
-const HomeStack=()=>(
-  <Stack.Navigator screenOptions={{headerShown:false }}>
+const HomeStack=({navigation})=>(
+  <Stack.Navigator screenOptions={{headerShown:false}}>
     <Stack.Screen name="HomePage" component={HomePage}/>
     <Stack.Screen name="Upload" component={Upload}/>
 
@@ -52,7 +44,7 @@ const Tab= createBottomTabNavigator();
   return(
     
     <Tab.Navigator
-    screenOptions={{headerShown:true,  "tabBarShowLabel": false, }}
+    screenOptions={{headerShown:false,  "tabBarShowLabel": false, }}
     
        >
             <Tab.Screen name='Home' component={HomeStack} options={{
@@ -144,13 +136,10 @@ const Tab= createBottomTabNavigator();
                   }}
                   
                   />
-                  
               
                 </View>
               )
             }}/>
-            
-            
         </Tab.Navigator>
 
   )
